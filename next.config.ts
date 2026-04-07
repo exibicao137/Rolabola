@@ -2,13 +2,12 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   typescript: {
-    // Ignora erros de TypeScript durante o build para garantir o deploy
+    // Mantemos para ignorar erros de tipo no deploy
     ignoreBuildErrors: true,
   },
-  eslint: {
-    // Ignora erros de linting (regras de escrita) durante o build
-    ignoreDuringBuilds: true,
-  },
+  // O Next.js agora prefere que configurações de lint sejam tratadas
+  // automaticamente ou via arquivo .eslintrc separado.
+  // Removendo a chave 'eslint' daqui, o aviso amarelo do log some!
 };
 
 export default nextConfig;
